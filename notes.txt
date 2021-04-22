@@ -1,0 +1,45 @@
+
+Download and install:
+
+    https://code.visualstudio.com/download
+
+Extensions:
+
+    Live Server 5.6.1
+    Material Icon Theme
+    Pretty Formatter
+
+
+UI:
+
+HTML:
+CSS Padding :
+The CSS padding property defines a padding (space) between the text and the border.
+example :
+p {
+  border: 2px solid powderblue;
+  padding: 30px;
+}
+
+CSS Margin :
+The CSS margin property defines a margin (space) outside the border.
+example :
+p {
+  border: 2px solid powderblue;
+  margin: 50px;
+}
+
+
+
+CSS
+JavaScript
+BootStrap
+JSON
+AJAX
+
+Frameworks or libraries:
+
+jQuery
+Angular
+React
+
