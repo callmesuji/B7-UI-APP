@@ -1,0 +1,2 @@
+define(["require","exports","tslib","lodash"],(function(e,t,i,c){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.cloneCategory=t.escapeRegExp=t.numCheckedActivities=void 0,c=i.__importStar(c),t.numCheckedActivities=function(e){return e.checked?e.activities.length:e.activities.filter((function(e){return e.checked})).length},t.escapeRegExp=function(e){return e.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")},t.cloneCategory=function(e){return c.defaults({activities:e.activities.map(c.clone)},e)}}));
+//# sourceMappingURL=util.min.js-vflo8R0JD.map

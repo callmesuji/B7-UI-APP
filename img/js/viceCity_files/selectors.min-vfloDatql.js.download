@@ -1,0 +1,2 @@
+define(["require","exports","modules/clean/redux/namespaces","modules/clean/redux/selectors"],(function(e,i,t,l){"use strict";Object.defineProperty(i,"__esModule",{value:!0}),i.getClinkTooltipVisible=i.getHasClinkTooltipDisplayed=void 0;var n=function(e){return l.getStateAtNamespace(e,t.FIRST_TASK_NAMESPACE_KEY)};i.getHasClinkTooltipDisplayed=function(e){return n(e).seenClinkTooltip},i.getClinkTooltipVisible=function(e){return n(e).activeClinkTooltipVisible}}));
+//# sourceMappingURL=selectors.min.js-vflDiReYv.map

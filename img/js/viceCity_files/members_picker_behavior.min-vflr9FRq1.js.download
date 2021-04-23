@@ -1,0 +1,2 @@
+define(["require","exports","modules/clean/teams/admin/pages/activity/activity_api"],(function(t,e,i){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.ActivityDataSource=void 0;var r=(function(){function t(){}return t.prototype.search=function(t){return t?i.partakers({prefix:t,limit:50}):[]},t})();e.ActivityDataSource=r}));
+//# sourceMappingURL=members_picker_behavior.min.js-vflqWxUeg.map

@@ -77,7 +77,7 @@
             </div>
 
         </div>
-        <!--MODAL-->
+        <!-- UPDATE MODAL-->
         <div class="modal fade" id="updateModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -88,24 +88,24 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form id="updatebook">
+                        <form id="updatebookForm">
                             <div class="form-group">
                                 <label for="title">TITLE</label>
-                                <input type="text" class="form-control" id="title" readonly placeholder="Enter the title of the book">
+                                <input  type="text" class="form-control" id="title" name="title" placeholder="Enter the title of the book">
                             </div>
                             <div class="form-group">
                                 <label for="author">AUTHOR</label>
-                                <input type="text" class="form-control" id="author" placeholder="Enter the author of the book">
+                                <input  type="text" class="form-control" id="author" name="author" placeholder="Enter the author of the book">
                             </div>
                             <div class="form-group">
                                 <label for="price">PRICE</label>
-                                <input type="text" class="form-control" id="price" placeholder="Enter the price of the book">
+                                <input  type="text" class="form-control" id="price" name="price" placeholder="Enter the price of the book">
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
-                        <button type="button" class="btn btn-primary" id="addbookbtn">UPDATE BOOK</button>
+                        <button type="button" class="btn btn-primary" id="updatebookbtn">UPDATE BOOK</button>
                     </div>
                 </div>
             </div>

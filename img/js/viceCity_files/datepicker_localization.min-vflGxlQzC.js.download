@@ -1,0 +1,2 @@
+define(["require","exports","modules/clean/datetime/datetime","modules/core/i18n"],(function(e,t,a,o){"use strict";function i(e){for(var t=new Date(0),a=t.getDay(),i=t.getDate()-a,n=[],r=0;r<7;r++){var s=new Date(0);s.setDate(i+r),n.push(o.intl.formatDate(s,{weekday:e?"short":"long"}))}return n}Object.defineProperty(t,"__esModule",{value:!0}),t.datepickerLocalization=void 0,t.datepickerLocalization={firstDayOfWeek:1,months:a.getMonths(),weekdaysLong:i(),weekdaysShort:i(!0)}}));
+//# sourceMappingURL=datepicker_localization.min.js-vfl090OBS.map

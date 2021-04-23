@@ -1,0 +1,2 @@
+define(["require","exports","tslib","react","dig-components/icons/src","dig-components/icons"],(function(e,n,o,t,i,c){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n.MentionIcon=void 0,t=o.__importStar(t),n.MentionIcon=function(){return t.createElement(c.UIIcon,{src:i.MentionLine})}}));
+//# sourceMappingURL=mention_icon.min.js-vflH3WmOF.map

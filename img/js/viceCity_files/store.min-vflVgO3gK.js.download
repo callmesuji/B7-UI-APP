@@ -1,0 +1,2 @@
+define(["require","exports","tslib","modules/clean/redux/store","modules/clean/redux/namespaces","modules/clean/react/growth/first_task/data/reducer","lodash"],(function(e,r,t,s,o,a,d){"use strict";Object.defineProperty(r,"__esModule",{value:!0}),r.getStoreForFirstTask=void 0,d=t.__importStar(d),r.getStoreForFirstTask=d.once((function(){var e;return s.getStoreAndRegisterReducers(((e={})[o.FIRST_TASK_NAMESPACE_KEY]=a.firstTaskReducer,e))}))}));
+//# sourceMappingURL=store.min.js-vflW5mjCx.map

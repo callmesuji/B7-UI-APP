@@ -1,0 +1,2 @@
+define(["require","exports","tslib","modules/clean/analytics","modules/core/browser_detection"],(function(e,o,i,t,s){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),o.logEvent=void 0,s=i.__importStar(s),o.logEvent=function(e,o){void 0===o&&(o={}),t.TeamsWebActionsLogger.log(e,i.__assign({module_name:"first_task_imm",mobile_web:s.is_supported_mobile_browser()},o))}}));
+//# sourceMappingURL=utils.min.js-vflpzoUv8.map

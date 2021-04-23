@@ -1,0 +1,2 @@
+define(["require","exports","tslib","react","dig-components/buttons"],(function(t,e,o,n,r){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.PostButton=void 0,n=o.__importStar(n),e.PostButton=n.memo((function(t){var e=t.label,o=t.disabled,i=t.onClick;return n.createElement(r.Button,{className:"sc-comment-editor-controls-post",disabled:o,onClick:i,variant:"primary"},e)}))}));
+//# sourceMappingURL=post_button.min.js-vflcVcB5T.map

@@ -1,0 +1,2 @@
+define(["require","exports"],(function(i,o){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),o.Actions=o.TooltipType=void 0,(function(i){i.Files="Files",i.Members="Members",i.None="None"})(o.TooltipType||(o.TooltipType={})),(function(i){i.MarkClinkTooltipSeen="FirstTask/MarkClinkTooltipSeen",i.ShowClinkMembersTooltip="FirstTask/ShowClinkMemberTooltip",i.ShowClinkFilesTooltip="FirstTask/ShowClinkFilesTooltip",i.HideClinkTooltip="FirstTask/HideClinkTooltip"})(o.Actions||(o.Actions={}))}));
+//# sourceMappingURL=types.min.js-vfloK1Wbk.map

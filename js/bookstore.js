@@ -1,3 +1,7 @@
+const addbookbtn = document.querySelector("#addbookbtn");
+const updatebook = document.querySelector("#updatebookForm");
+const addbook = document.querySelector("#addbook");
+var i = -1;
 let books = [
     {
         title: "AN INTEGRATED APPROACH",
@@ -42,10 +46,9 @@ function showBooks(inputBooks) {
     bookcontent.innerHTML = html;
 }
 showBooks(books);
-const addbookbtn = document.querySelector("#addbookbtn");
-const addbook = document.querySelector("#addbook");
 addbookbtn.addEventListener('click', (event) => {
     event.preventDefault();
+    console.log("Add ",addbook);
     let book = { title: addbook.title.value, author: addbook.author.value, price: addbook.price.value }
     if (addbook.title.value === "" || addbook.title.author === "" || addbook.title.price === "") {
         alert("Please Enter All the Options")
@@ -62,8 +65,9 @@ function deleteBook(title) {
     let res = confirm("ARE YOU SURE TO DELETE : " + title + " ?");
     if (res) {
         books = books.filter(book => book.title !== title);
-        showBooks(books)
     }
+    showBooks(books)
+
 }
 function indexOf(title) {
     for (let i = 0; i < books.length; i++) {
@@ -74,17 +78,39 @@ function indexOf(title) {
     }
     return -1;
 }
-const updatebook = document.querySelector("#updatebook")
+
+const updateBtn = document.querySelector("#updatebookbtn");
+
+updateBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    console.log("In update button")
+    const updatebook = document.querySelector("#updatebookForm");
+    console.log(i);
+    console.log(this.i);
+    console.log(updatebook);
+    let b = { title: updatebook.title.value, author: updatebook.author.value, price: updatebook.price.value }
+    console.log("updated book " + b);
+    if (this.i >= 0) {
+        console.log("in if");
+        this.books.pop(i)
+        console.log(this.i);
+    }
+    showBooks(books);
+})
 
 function editBook(title) {
-
     let index = indexOf(title);
     let book = books[index];
     console.log(book);
+    this.i = index;
     updatebook.title.value = book.title;
     updatebook.author.value = book.author;
     updatebook.price.value = book.price;
-    
-
-    
 }
+
+document.querySelector("#search").addEventListener('keyup', (search) => {
+    search.preventDefault();
+    let searchBooks = books.filter(book => book.title.includes(search.target.value));
+    showBooks(searchBooks);
+})
+

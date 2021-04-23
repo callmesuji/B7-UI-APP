@@ -1,0 +1,2 @@
+define(["require","exports"],(function(o,e){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.LoggerBehavior=void 0,e.LoggerBehavior=function(o){var e=o.loggingFunction,n=void 0===e?function(){}:e,i=o.logToConsole,r=void 0!==i&&i,t=o.actionsToLog,a=void 0===t?[]:t;return(function(){function o(){var o=this;a.forEach((function(e){var i=e.action,t=e.parser;i.watch((function(e,i){var a=o.getState(),c=t(i,a);c&&n(c),r&&console.log(c)}))}))}return o.displayName="Logger",o})()}}));
+//# sourceMappingURL=logger_behavior.min.js-vflTe4KpN.map

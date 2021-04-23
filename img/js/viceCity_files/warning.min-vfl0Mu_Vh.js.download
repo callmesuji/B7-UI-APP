@@ -1,0 +1,2 @@
+define(["require","exports","tslib","lodash"],(function(e,n,o,r){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),r=o.__importStar(r),n.warning=function(e,n){if(!(r.isFunction(e)?e():e)){var o=r.isFunction(n)?n():n;if(console)console.warn(o),console.trace();else try{throw new Error(o)}catch(e){}}}}));
+//# sourceMappingURL=warning.min.js-vfl5Icop6.map

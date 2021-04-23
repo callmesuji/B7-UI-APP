@@ -1,0 +1,2 @@
+define(["require","exports","tslib","classnames","react","modules/clean/react/pass/constants"],(function(e,t,a,E,s,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.EmptySeenStateFacepile=void 0,E=a.__importDefault(E),s=a.__importDefault(s),t.EmptySeenStateFacepile=function(e){var t,a=e.presenceComplete,n=E.default(l.FACEPILE_CLASSNAME,l.EMPTY_FACEPILE_CLASSNAME,((t={})[l.PRESENCE_RECEIVED_CLASSNAME]=a,t));return s.default.createElement("div",{className:n})}}));
+//# sourceMappingURL=empty_seen_state_facepile.min.js-vflWORdRM.map

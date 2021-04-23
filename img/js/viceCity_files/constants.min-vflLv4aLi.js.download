@@ -1,0 +1,2 @@
+define(["require","exports"],(function(e,n){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n.OpenTeamJoinUserAction=n.PROJECT=void 0,n.PROJECT="te_open_team_join",(function(e){e.ONBOARDING_MODAL_VIEW_AFTER_INVITE="onboarding_modal_view",e.ONBOARDING_MODAL_VIEW_AFTER_APPROVAL="onboarding_modal_view_after_approval"})(n.OpenTeamJoinUserAction||(n.OpenTeamJoinUserAction={}))}));
+//# sourceMappingURL=constants.min.js-vflFxTMj4.map
