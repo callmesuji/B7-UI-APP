@@ -4,8 +4,12 @@ const team_players = document.querySelector("#players");
 
 function showPlayers() {
     const label = document.querySelector("#teamlabel").value;
-    if (label.value != "") {
-        showPieChart();
+
+    if (label.value == "") {
+        team_players.innerHTML = "";
+    }
+    else if (label.value != "") {
+
         let url = `${baseurl}${label}`;
         fetch(url).then(response => response.json()).then(res => {
             let result = res;
@@ -36,10 +40,10 @@ function showPlayers() {
             team_players.innerHTML = html;
         }).catch(error => {
             alert("system is down please try after few minutes" + error);
-        })
+        });
         url = `${baseurl}role/${label}`;
         fetch(url).then(response => response.json()).then(res => {
-            let chartData = [["role", "count"]];
+            let chartData = [["", ""]];
             res.forEach(ele => {
                 chartData.push([ele['roleName'], ele['count']]);
             });
@@ -53,7 +57,7 @@ function showLabels() {
         .then(response => response.json())
         .then(res => {
             let labels = res.labels;
-            let html = '<select id = "teamlabel" class = "form-control" onchange = "showPlayers()"><option value = "">Select Team</option>';
+            let html = '<select id = "teamlabel" class = "form-control" onchange = "showPlayers()"><option value = "" >Select Team</option>';
             labels.forEach(ele => {
                 html += `<option value = "${ele}">${ele}</option>`
             });
