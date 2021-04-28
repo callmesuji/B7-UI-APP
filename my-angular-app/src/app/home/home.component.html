@@ -1,1 +1,74 @@
-<p>home works!</p>
+<div class="row">
+    <div class="col">
+        <p class="cust-heading">{{title}}</p>
+        <p class="lead">{{heading}}</p>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let course of courses;index as i ">{{i + 1}}.
+                {{course}}</li>
+        </ul>
+        <p class="lead">
+            Data binding - Property
+        </p>
+        <img class="binding-image" [src]="imgUrl">
+            <p class="lead">
+                Data binding - Attribute
+            </p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th [attr.colspan]="colSpan" class="text-center">
+                            User Details</th>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users">
+                        <td>{{user.name}}</td>
+                        <td>{{user.email}}</td>
+                        <td>
+                            <button class="btn text-white" [style.background]="user.isworking?'green':'red'">{{user.isworking}}</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="lead">
+                Data binding - Style</p>
+            <button class="btn mr-2 text-white" [style.background]="isActive ? 'green':'red'" (click)="changeStatus()">On/Off</button>
+            <p class="lead">
+                Data binding - Twoway
+            </p>
+            <div class="form-group">
+                <input type="text" [(ngModel)]="message" class="form-control" placeholder="Enter message"></div>
+                {{message}}
+
+            </div>
+            <div class="col">
+                <p class="cust-heading">Event Binding -TODO APP</p>
+                <div class="form-group">
+                    <input type="text" class="form-control" [(ngModel)] = "todo" placeholder="Enter Your todo" (keyup.enter) = "displaytodo()">
+                </div>
+                <div *ngIf = "todos.length > 0">
+                    <ul class="list-group">
+                        <li class="list-group-item" *ngFor = "let t of todos; index as i">  {{t}}
+                            <span class="float-right"><i class="fa fa-trash" (click) = "removeTodo(i)"></i></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card mt-2" style="width: 18rem; ">
+                    <div class="card-body">
+                      <h5 class="card-title"> {{userprofile.name}}</h5>
+                      <p class="card-text mt-2">
+                          <i class="fa fa-at"> :- {{userprofile.email}} </i><br>
+                          <i class="fa fa-money"> :- {{userprofile.salary}}</i><br>
+                          <i class="fa fa-birthday-cake"> :- {{userprofile.dob | date}}</i><br>
+                      </p>
+                    </div>
+                  </div>
+            </div>
+
+
+            <div class="col"></div>
+        </div>
