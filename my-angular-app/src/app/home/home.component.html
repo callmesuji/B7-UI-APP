@@ -59,16 +59,24 @@
                 </div>
                 <div class="card mt-2" style="width: 18rem; ">
                     <div class="card-body">
-                      <h5 class="card-title"> {{userprofile.name}}</h5>
+                      <h5 class="card-title"> {{userprofile.name | uppercase}}</h5>
                       <p class="card-text mt-2">
                           <i class="fa fa-at"> :- {{userprofile.email}} </i><br>
                           <i class="fa fa-money"> :- {{userprofile.salary}}</i><br>
                           <i class="fa fa-birthday-cake"> :- {{userprofile.dob | date}}</i><br>
+                          <i class="fa fa-info"> :- {{userprofile.text | summary : "U" : 20}}</i><br>
                       </p>
                     </div>
                   </div>
             </div>
 
+            <div class="col">
+                <p class="cust-heading">Sharing data - Contact APP </p>
+                <div *ngIf="contacts.length > 0">
+                <div *ngFor = "let c of contacts">
+                    <app-viewcontact [userData] = "c" (removeEle)= 'deleteContact($event)'></app-viewcontact>                         
+                    </div>
 
-            <div class="col"></div>
+                </div>
+            </div>
         </div>
