@@ -1,1 +1,76 @@
-<p>forms works!</p>
+<div class="row">
+    <div class="col">
+            <p class="cust-heading">Template Driven Forms</p>
+        <div class="ml-4 mr-4">    
+                <form #empForm = "ngForm" (ngSubmit) = "submitEmpForm(empForm)">
+                         <div class="form-group">
+                             <label for="ename">Employee Name</label>
+                             <input ngModel type="text" name="ename" class="form-control" id="ename" placeholder="enter employee name"
+                             #ename = "ngModel" required minlength="5"
+                             >
+                             <div class="text text-danger" *ngIf="(ename.touched||ename.dirty)&& ename.invalid">
+                                <span *ngIf="ename.errors?.required">Ename can't empty</span>
+                                <span *ngIf="ename.errors?.minlength">Ename should have more 5 characters</span>
+                            </div>
+                         </div>
+                             <div class="form-group">
+                                 <label for="email">Email</label>
+                                 <input ngModel type="email" name="email" class="form-control" id="email" placeholder="enter employee email">
+                             </div>
+                             <div class="form-group">
+                                     <label for="qualification">Qualification</label>
+                                     <select ngModel name="qualification" class="form-control" id="qualification">
+                                         <option disabled="disabled" selected="selected">Select Qualification</option>
+                                         <option *ngFor="let qua of Qualifications" value="{{qua}}">{{qua}}</option>
+                                     </select>
+                             </div>
+                                <div ngModelGroup="address">
+                                 <fieldset >
+                                     <legend>Address</legend>
+                                     <div class="ml-4 mr-4">
+                                              <div class="form-group">
+                                                      <label for="city">City</label>
+                                                      <input ngModel type="text" name="city" class="form-control" id="city" placeholder="enter employee city">
+                                              </div>
+                                              <div class="form-group">
+                                                      <label for="state">State</label>
+                                                      <input ngModel type="text" name="state" class="form-control" id="state" placeholder="enter employee state">
+                                              </div>
+                                     </div>
+                                 </fieldset>
+                                </div>
+                             
+                            <button class="btn btn-danger"[disabled]="!empForm.valid">SUBMIT</button>
+                        </form>
+                        {{empForm.value | json}}
+        </div>            
+    </div>
+    <div class="col">
+        <p class="cust-heading">Reactive Forms</p>
+        <form [formGroup] = "userReg" (ngSubmit) = "submitForm()">
+            <div class="form-group">
+                <label for="username">username</label>
+                <input type="text" name="username" id="username" class="form-control" formControlName="username" placeholder="Enter name">
+                <span class="text text-danger" *ngIf="username.invalid && username.touched">
+                    Username can't be empty
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="mobile">mobile</label>
+                <input type="text" name="mobile" id="mobile" class="form-control" formControlName="mobile" placeholder="Enter the valid mobile no">
+            </div>
+            <div formGroupName = "address">
+            <div class="form-group">
+                <label for="zipcode">zipcode</label>
+                <input type="text" name="zipcode" id="zipcode" class="form-control" formControlName="zipcode" placeholder="Enter zipcode">
+            </div>
+            <div class="form-group">
+                <label for="country">country</label>
+                <input type="text" name="country" id="country" class="form-control" formControlName="country" placeholder="Enter country">
+            </div>
+        </div>
+        <button class="btn btn-danger" [disabled]="!userReg.valid">SUBMIT</button>
+        </form>
+        {{userReg.value | json}}
+    </div>
+</div>

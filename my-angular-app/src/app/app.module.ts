@@ -8,9 +8,11 @@ import { ServicesComponent } from './services/services.component';
 import { FormsComponent } from './forms/forms.component';
 import { ProjectComponent } from './project/project.component';
 import { HomeComponent } from './home/home.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SummaryPipe } from './shared/summary.pipe';
 import { ViewcontactComponent } from './viewcontact/viewcontact.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { TransformDirective } from './shared/directives/transform.directive';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,15 @@ import { ViewcontactComponent } from './viewcontact/viewcontact.component';
     ProjectComponent,
     HomeComponent,
     SummaryPipe,
-    ViewcontactComponent
+    ViewcontactComponent,
+    DirectivesComponent,
+    TransformDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
