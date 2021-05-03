@@ -69,7 +69,7 @@
                 <input type="text" name="country" id="country" class="form-control" formControlName="country" placeholder="Enter country">
             </div>
         </div>
-        <button class="btn btn-danger" [disabled]="!userReg.valid">SUBMIT</button>
+        <button class="btn btn-danger" type="submit" [disabled]="!userReg.valid">SUBMIT</button>
         </form>
         {{userReg.value | json}}
     </div>

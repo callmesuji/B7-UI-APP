@@ -11,7 +11,9 @@ import { Employee } from '../model/employee.model';
 export class FormsComponent implements OnInit {
   Qualifications = ["BTECH","MTECH","MCA","BCA","MS"];
 
+  
   userReg : FormGroup = this.fb.group({
+
     username : ['',[Validators.required,Validators.minLength(5)]],
     mobile : ['',Validators.required],
     address :this.fb.group({
