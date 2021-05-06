@@ -6,9 +6,9 @@ import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
   {
-    path : '',
+    path: '',
     component : EpmsComponent,
-    children :[
+    children:[
       {
         path : '',
         component : SearchComponent

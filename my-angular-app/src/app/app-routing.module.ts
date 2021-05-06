@@ -4,7 +4,6 @@ import {DirectivesComponent} from './directives/directives.component';
 import {FormsComponent} from './forms/forms.component';
 import {HomeComponent} from './home/home.component';
 import {ProjectComponent} from './project/project.component';
-import {ServicesComponent} from './services/services.component';
 
 const routes: Routes = [
 
@@ -12,10 +11,6 @@ const routes: Routes = [
         path: '',
         component: HomeComponent,
         pathMatch: 'full'
-    },
-    {
-        path: 'services',
-        component: ServicesComponent
     },
     {
         path: 'forms',
@@ -30,9 +25,10 @@ const routes: Routes = [
     }, {
         path: 'directives',
         component: DirectivesComponent
-    }, {
-        path: 'epms',
-        loadChildren: () => import ('./epms/epms.module').then(m => m.EpmsModule)
+    }, 
+    {
+        path : 'epms',
+        loadChildren : ()=>import ('./epms/epms.module').then(m => m.EpmsModule)
     }
 ];
 

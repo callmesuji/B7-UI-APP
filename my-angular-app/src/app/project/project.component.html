@@ -1,1 +1,38 @@
-<p>project works!</p>
+<div class="row mt-2 ">
+
+    <div class="col-md-6">
+        <select *ngIf="labels" class="form-control" [(ngModel)]="selectedLabel" (change)="onsubmit()">
+
+            <option>Select Team Label</option>
+            <option *ngFor="let label of labels" [value]="label">{{label}}</option>
+        </select>
+        <div class="mt-2">
+            <table class="table table-hover table-dark">
+                <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>LABEL</th>
+                        <th>PRICE</th>
+                        <th>ROLE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let player of players">
+                        <td>{{player.name}}</td>
+                        <td>{{player.label}}</td>
+                        <td>{{player.price}}</td>
+                        <td>{{player.role}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="col-md-5">
+        <div *ngIf="chartData.length !=0" [(ngModel)] = "chartData" >
+            <google-chart [data]="pieChart"></google-chart>
+        </div>
+    </div>
+</div>
+<div class="row mt-2 "></div>

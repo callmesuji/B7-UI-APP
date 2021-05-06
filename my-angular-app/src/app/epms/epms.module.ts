@@ -5,6 +5,7 @@ import { EpmsRoutingModule } from './epms-routing.module';
 import { EpmsComponent } from './epms.component';
 import { SearchComponent } from './search/search.component';
 import { CreateComponent } from './create/create.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,9 @@ import { CreateComponent } from './create/create.component';
   ],
   imports: [
     CommonModule,
-    EpmsRoutingModule
+    EpmsRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class EpmsModule { }
