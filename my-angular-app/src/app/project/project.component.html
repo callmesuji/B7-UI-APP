@@ -6,7 +6,19 @@
             <option>Select Team Label</option>
             <option *ngFor="let label of labels" [value]="label">{{label}}</option>
         </select>
-        <div class="mt-2">
+       
+        <div class="mt-2" *ngIf = "players.length > 0">
+            <button type="button" class="btn btn-dark mt-2 mb-2">
+               COUNT <span class="badge badge-warning"> {{players.length}}</span>  
+              </button>&nbsp;
+              <button type="button" class="btn btn-danger mt-2 mb-2">
+                TOTAL <span class="badge badge-warning fa fa-inr"> {{getTotalAmount() | number : '1.1-1'}}</span>  
+               </button>&nbsp;
+               <button type="button" class="btn btn-danger mt-2 mb-2">
+                AVG <span class="badge badge-warning  fa fa-inr"> {{getAvgAmount() | number : '1.1-1'}}</span>  
+               </button>
+ 
+
             <table class="table table-hover table-dark">
                 <thead>
                     <tr>
@@ -20,7 +32,7 @@
                     <tr *ngFor="let player of players">
                         <td>{{player.name}}</td>
                         <td>{{player.label}}</td>
-                        <td>{{player.price}}</td>
+                        <td class = "fa fa-inr"> {{player.price}}</td>
                         <td>{{player.role}}</td>
 
                     </tr>
